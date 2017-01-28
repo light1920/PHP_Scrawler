@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-->To add additional functionality and event handling.<-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!--To add additional functionality and event handling.-->
 <script>
 //Function to open up a div box with the contents of the headlines of a link which is hovered upon.
 $(document).ready(function(){
