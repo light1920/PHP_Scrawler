@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 
-<!-->This page is the front page just to show information about the crawler.<-->
+<!--This page is the front page just to show information about the crawler.-->
 
 <head>
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-->Link to external jquery library to use some animation and handling events<-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!--Link to external jquery library to use some animation and handling events-->
 
 <script>
 //function to open the documentaion and animate it to slide from left to right and then closing it.
@@ -115,7 +115,7 @@ small {
 
 <body>
 
-<!-->Contains the document slider and close button with the documentaion<-->
+<!--Contains the document slider and close button with the documentaion-->
 <div id="container">
 <div id="close" style="font-size:15px;">Close</div>
 <div id="content" style="display:none;">
@@ -123,14 +123,14 @@ small {
 <p style="font-size:20px;">This page is mainly written to gather information about Latest News about Trump from CNN website.<br /><br />
 This is a custom-made crawler specifically to search for the contents of Donald John Trump from CNN website and display the headlines of latest news.<br/>
 Web Crawlers, sometimes called scrapers, automatically scan the Internet attempting to glean context and meaning of the content they find.<br />
-The web wouldn’t function without them.<br />
+The web wouldnâ€™t function without them.<br />
 Crawlers are the backbone of search engines which, combined with clever algorithms, work out the relevance of your page to a given keyword set.<br />
-This basic crawler – not one that scans the whole CNN website, though, but one that is able to extract all the latest fifty headlines from a CNN webpage about Donald Trump.<br />
-The crawler is made by using the most common programming language of the internet – PHP.<br />
+This basic crawler â€“ not one that scans the whole CNN website, though, but one that is able to extract all the latest fifty headlines from a CNN webpage about Donald Trump.<br />
+The crawler is made by using the most common programming language of the internet â€“ PHP.<br />
 We will be needing a web server to run PHP. If you already own a website then you have one, or else we can launch this crawler by simply hosting it on Apache local server.<br />
 In this crawler we have used a helper class called Simple HTML DOM <a href="http://cdn.makeuseof.com/wp-content/uploads/2010/12/my-first-crawler.zip?663fb1" sl-processed="1"> (this zip file)</a>.<br />
 1. First pull the HTML DOM file by using the line: include_once('simple_html_dom.php'); <br />
-2. Give your target url, in this case: $target_url = “http://edition.cnn.com/;. <br />
+2. Give your target url, in this case: $target_url = â€œhttp://edition.cnn.com/;. <br />
 3. Load your target url source in DOM object using: $html->load_file($target_url); <br />
 4. Now begin parsing your DOM object against the keyword to look for specific information. <br /><br />
 In this page, the latest news of Trump have been scrapped from the CNN website which will always return the latest 50 news of Donald Trump. <br />
@@ -140,7 +140,7 @@ On hovering over the link "READ FULL TEXT HERE", a window opens up with a previe
 </div>
 </div>
 
-<!-->A form to link it to PHP Crawler. U just have to hit the show button.<-->
+<!--A form to link it to PHP Crawler. U just have to hit the show button.-->
 <form id="contact-form" action="scrawler.php" method="post">
   <p>Welcome to CNN News</p> 
   <p>Get the Latest News about <b><u>Donald John Trump</u></b> here..</p>
