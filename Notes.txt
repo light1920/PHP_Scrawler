@@ -1,0 +1,12 @@
+----------------A brief Documentaion of the Project--------------------
+
+1. There are plenty of ways to use a web scrawler and customize it according to our need.
+2. Most web scrawlers are written in Java.
+3. I found Scrapy, a web scrawler based on Python most interesting because I am more familiar with using Python.
+4. But for using Scrapy, there are many things need to be done, like installing pywin32 and lxml for the windows you are using.
+5. I found this information by developing this project in Python first. Which started to become complicated according to the need of the project.
+6. PHP scrawler was far more easier to use as after you load the target url into your HTML DOM Object, you have to parse it for your preference.
+7. In this project, I found out that, even Scrapy does the same thing using set of in-built functions like, start_urls and parse wich extract all the DOM data for you.
+8. Approach is same in both the cases but have different functionaily and freedom.
+9. Displaying the captured information back to the webpage was far more easier in PHP.
+10.I found PHP more easier and faster approach in solving this problem with very little complexity.

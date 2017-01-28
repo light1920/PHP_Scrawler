@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<!-->This page is the front page just to show information about the crawler.<-->
+
+<head>
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-->Link to external jquery library to use some animation and handling events<-->
+
+<script>
+//function to open the documentaion and animate it to slide from left to right and then closing it.
+$(document).ready(function()
+{
+	$("#document").click(function()
+	{
+		$("#container").animate({width: '200vh'}, function()
+		{
+			$("#content").fadeIn();
+		});
+	});
+	
+	$("#close").click(function()
+	{
+		$("#content").hide(function()
+		{
+			$("#container").animate({width: '0vh'});
+		});
+	});
+});
+</script>
+<style>
+
+body {
+  font-family: 'Lato', georgia;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 1);
+  background-color: white;
+  color:black;
+  text-align: center;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+#contact-form {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.send-icn {
+  fill: rgba(0, 0, 0, 1);
+}
+
+.send-icn:hover {
+  fill: rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  margin: 2vmax;
+}
+
+button:hover small {
+  opacity: 1;
+}
+
+small {
+  display: block;
+  opacity: 1;
+}
+#document:hover
+{
+	background-color:black;
+	color:white;
+	cursor: pointer;
+}
+
+#container
+{
+	background-color:black;
+	color:white;
+	height:90vh;
+	width:0vh;
+	position:absolute;
+	opacity:1.0;
+}
+#close:hover
+{
+	cursor:pointer;
+}
+
+#content
+{
+	overflow: scroll;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+#content::-webkit-scrollbar
+{
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+/* optional: show position indicator in red */
+#content::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<!-->Contains the document slider and close button with the documentaion<-->
+<div id="container">
+<div id="close" style="font-size:15px;">Close</div>
+<div id="content" style="display:none;">
+<p>Documentation of this PHP based crawler.</p>
+<p style="font-size:20px;">This page is mainly written to gather information about Latest News about Trump from CNN website.<br /><br />
+This is a custom-made crawler specifically to search for the contents of Donald John Trump from CNN website and display the headlines of latest news.<br/>
+Web Crawlers, sometimes called scrapers, automatically scan the Internet attempting to glean context and meaning of the content they find.<br />
+The web wouldn’t function without them.<br />
+Crawlers are the backbone of search engines which, combined with clever algorithms, work out the relevance of your page to a given keyword set.<br />
+This basic crawler – not one that scans the whole CNN website, though, but one that is able to extract all the latest fifty headlines from a CNN webpage about Donald Trump.<br />
+The crawler is made by using the most common programming language of the internet – PHP.<br />
+We will be needing a web server to run PHP. If you already own a website then you have one, or else we can launch this crawler by simply hosting it on Apache local server.<br />
+In this crawler we have used a helper class called Simple HTML DOM <a href="http://cdn.makeuseof.com/wp-content/uploads/2010/12/my-first-crawler.zip?663fb1" sl-processed="1"> (this zip file)</a>.<br />
+1. First pull the HTML DOM file by using the line: include_once('simple_html_dom.php'); <br />
+2. Give your target url, in this case: $target_url = “http://edition.cnn.com/;. <br />
+3. Load your target url source in DOM object using: $html->load_file($target_url); <br />
+4. Now begin parsing your DOM object against the keyword to look for specific information. <br /><br />
+In this page, the latest news of Trump have been scrapped from the CNN website which will always return the latest 50 news of Donald Trump. <br />
+The set of information scrapped for each headlines are the Headlines' Title, Link to the actual news page and image of the headline. <br />
+On hovering over the link "READ FULL TEXT HERE", a window opens up with a preview of the news of the headline.<br />
+</p>
+</div>
+</div>
+
+<!-->A form to link it to PHP Crawler. U just have to hit the show button.<-->
+<form id="contact-form" action="scrawler.php" method="post">
+  <p>Welcome to CNN News</p> 
+  <p>Get the Latest News about <b><u>Donald John Trump</u></b> here..</p>
+
+  <p>
+    <button type="submit">
+      <svg version="1.1" class="send-icn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px" height="36px" viewBox="0 0 100 36" enable-background="new 0 0 100 36" xml:space="preserve">
+        <path d="M100,0L100,0 M23.8,7.1L100,0L40.9,36l-4.7-7.5L22,34.8l-4-11L0,30.5L16.4,8.7l5.4,15L23,7L23.8,7.1z M16.8,20.4l-1.5-4.3
+	l-5.1,6.7L16.8,20.4z M34.4,25.4l-8.1-13.1L25,29.6L34.4,25.4z M35.2,13.2l8.1,13.1L70,9.9L35.2,13.2z" />
+      </svg>
+      <small>show</small>
+    </button>
+  </p>
+	<p id="document">Documentation</p>
+</form>
+
+
+</body>
+</html>
